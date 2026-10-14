@@ -1,0 +1,19 @@
+{
+  "name": "solana-rent-inspector",
+  "version": "0.1.0",
+  "description": "Inspect live Solana rent-exemption requirements for arbitrary account sizes.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "bin": { "solana-rent-inspector": "./dist/src/cli.js" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "typescript": "^7.0.2"
+  }
+}
